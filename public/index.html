@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Inventory</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./pictures/books-icon.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Google fonts(Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Book Inventory</h1>
+
+    <form id="createBookForm">
+      <label for="title">Title:</label><br />
+      <input type="text" id="title" name="title" required /><br />
+      <label for="author">Author:</label><br />
+      <input type="text" id="author" name="author" required /><br />
+      <label for="genre">Genre:</label><br />
+      <input type="text" id="genre" name="genre" /><br />
+      <label for="publicationYear">Publication Year:</label><br />
+      <input type="text" id="publicationYear" name="publicationYear" /><br />
+      <label for="quantityAvailable">Quantity Available:</label><br />
+      <input
+        type="number"
+        id="quantityAvailable"
+        name="quantityAvailable"
+      /><br />
+      <label for="price">Price:</label><br />
+      <input type="number" id="price" name="price" /><br /><br />
+      <button type="submit">Add Book</button>
+    </form>
+
+    <div id="filterContainer">
+      <label for="filterBy">Filter by:</label><br />
+      <input
+        type="text"
+        id="filterBy"
+        name="filterBy"
+        placeholder="Enter filter criteria"
+      /><br />
+      <button id="applyFilterBtn">Apply Filter</button>
+    </div>
+
+    <div id="sortContainer">
+      <label for="sortBy">Sort by:</label><br />
+      <input
+        type="text"
+        id="sortBy"
+        name="sortBy"
+        placeholder="Enter sorting criteria"
+      /><br />
+      <button id="applySortBtn">Apply Sort</button>
+    </div>
+
+    <div id="searchContainer">
+      <label for="searchQuery">Search:</label><br />
+      <input
+        type="text"
+        id="searchQuery"
+        placeholder="Enter search query"
+      /><br />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="booksContainer"></div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
